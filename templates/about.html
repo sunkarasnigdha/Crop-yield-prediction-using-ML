@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <title>Crop Home</title>
+    <!-- <link rel="stylesheet" href="home.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+
+</head>
+
+<body>
+    <h1 class="text-center" style="color: rgb(255, 255, 255);">Crop Yield Prediction System</h1>
+    <hr>
+    <div class="header">
+        <nav>
+            <div class="nav-links">
+                <!-- <a href="about.html">About</a>
+                <a href="Home.html">Crops</a>
+                <a href="index.html">Prediction</a> -->
+                <!-- <a href="{{ url_for('about') }}">About</a>
+                <a href="{{ url_for('home') }}">Crops</a>
+                <a href="{{ url_for('index') }}">Prediction</a> -->
+                <a href="{{ url_for('home') }}"><i class="fas fa-home"></i> Home</a>
+                <a href="{{ url_for('gallery') }}"><i class="fas fa-leaf"></i> Crops</a>
+                <a href="{{ url_for('index') }}"><i class="fas fa-info-circle"></i> Prediction</a>
+                <a href="{{ url_for('about') }}"><i class="fas fa-seedling"></i> About</a>
+
+            </div>
+        </nav>
+    </div>
+    <hr>
+    <section style="padding: 50px 25px; max-width: 1000px; margin: auto; color: white;">
+        <h2 style="text-align:center; font-size: 32px; margin-bottom: 15px;">About Us</h2>
+        <p style="font-size: 18px; line-height: 1.8; text-align: justify;">
+            Welcome to the <strong>Crop Yield Prediction System</strong> — a smart tool built with machine learning
+            to
+            help farmers and agricultural experts predict crop yields more accurately than ever before!
+        </p>
+        <ul style="font-size: 18px; line-height: 1.7;">
+            <li>📅 <strong>Years Covered:</strong> 1990 to 2013 historical agricultural data</li>
+            <li>🌧️ <strong>Rainfall Insights:</strong> Regional average annual rainfall</li>
+            <li>🌡️ <strong>Temperature Records:</strong> Annual average temperatures</li>
+            <li>🧪 <strong>Pesticide Usage:</strong> Tonnes of pesticide applied per country</li>
+            <li>🌍 <strong>Geographic Reach:</strong> Data from 101 countries worldwide</li>
+            <li>🌽 <strong>Crop Categories:</strong> 10 major crops including grains, pulses, and roots</li>
+        </ul>
+        <p style="font-size: 18px; line-height: 1.7; text-align: justify;">
+            Our goal is to bridge data science and agriculture to empower smarter, more sustainable farming decisions
+            🌱.
+        </p>
+    </section>
+    <section style="color: white; text-align: center; padding: 40px;">
+        <h2>🌐 Our Impact So Far</h2>
+        <div style="display: flex; justify-content: center; gap: 40px; margin-top: 20px;">
+            <div>
+                <h3 style="font-size: 32px;">100+</h3>
+                <p>Countries Analyzed</p>
+            </div>
+            <div>
+                <h3 style="font-size: 32px;">10+</h3>
+                <p>Crop Types Supported</p>
+            </div>
+            <div>
+                <h3 style="font-size: 32px;">23 Years</h3>
+                <p>Historical Data Used</p>
+            </div>
+        </div>
+    </section>
+    <section style="padding: 40px 20px; color: white;">
+        <h2 style="text-align: center; font-size: 28px;">📈 Project Journey</h2>
+        <ul style="max-width: 700px; margin: auto; font-size: 17px; line-height: 1.7;">
+            <li><strong>🔬 Research Phase:</strong> Identified key agricultural factors and gathered global crop
+                datasets.
+            </li>
+            <li><strong>📊 Model Training:</strong> Used Decision Tree Regressor with preprocessing pipelines.</li>
+            <li><strong>🧪 Testing:</strong> Evaluated accuracy on unseen data for real-world reliability.</li>
+            <li><strong>🌐 Deployment:</strong> Built this web interface using Flask to make it accessible to everyone.
+            </li>
+        </ul>
+    </section>
+
+    <footer style="background-color: #111; color: white; padding: 25px 15px; text-align: center; margin-top: 60px;">
+        <p style="font-size: 16px;">📧 Contact us at:
+            <a href="mailto:support@cropyield.ai" style="color: #0ed9dd;">shashanksankepally@gmail.com</a>
+        </p>
+        <p style="margin-top: 10px; font-size: 15px;">&copy; {{ now.year }} Crop Yield Prediction System. All rights
+            reserved.</p>
+    </footer>
+
+
+</body>
+
+</html>

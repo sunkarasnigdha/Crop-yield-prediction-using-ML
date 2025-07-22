@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- <link rel="stylesheet" href="home.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+
+</head>
+
+<body>
+    <h1 class="text-center" style="color: rgb(255, 255, 255);">Crop Yield Prediction System</h1>
+    <hr>
+    <div class="header">
+        <nav>
+            <div class="nav-links">
+                <!-- <a href="about.html">About</a>
+                <a href="Home.html">Crops</a>
+                <a href="index.html">Prediction</a> -->
+
+                <!-- <a href="{{ url_for('about') }}">About</a>
+                <a href="{{ url_for('home') }}">Crops</a>
+                <a href="{{ url_for('index') }}">Prediction</a> -->
+
+
+                <a href="{{ url_for('home') }}"><i class="fas fa-home"></i> Home</a>
+                <a href="{{ url_for('gallery') }}"><i class="fas fa-leaf"></i> Crops</a>
+                <a href="{{ url_for('index') }}"><i class="fas fa-info-circle"></i> Prediction</a>
+                <a href="{{ url_for('about') }}"><i class="fas fa-seedling"></i> About</a>
+
+            </div>
+        </nav>
+    </div>
+    <hr><br><br>
+    <section
+        style="text-align: center; color: #ffffff; padding: 40px 20px; background: rgba(255,255,255,0.05); border-radius: 20px; margin: 30px auto; max-width: 1000px;">
+        <h2 style="font-size: 32px; margin-bottom: 10px;">🌿 Welcome to the Crop Yield Prediction Assistant!</h2>
+        <p style="font-size: 18px; line-height: 1.7; max-width: 800px; margin: 0 auto;">
+            Your smart companion for modern farming. Enter your soil and environmental details, and our system will
+            provide fast, accurate predictions to help you grow the right crops for your land. Let's take the guesswork
+            out
+            of agriculture and make every harvest more profitable and sustainable.
+        </p>
+        <p style="font-size: 18px; line-height: 1.7; max-width: 800px; margin: 0 auto;color: #000;">Crop yield refers to
+            the amount
+            of agricultural produce harvested per unit of land. It's a critical metric in
+            farming,
+            as it directly impacts food availability and economic stability.</p>
+    </section>
+    </script>
+    <details style="max-width: 800px; margin: 20px auto; color: white;">
+        <summary style="font-size: 18px; cursor: pointer;">💡 How does the prediction model work?</summary>
+        <p style="margin-top: 10px;">It uses a machine learning algorithm trained on historical data including rainfall,
+            temperature, pesticides, etc., to forecast likely yield output.</p>
+    </details>
+
+    <details style="max-width: 800px; margin: 10px auto; color: white;">
+        <summary style="font-size: 18px; cursor: pointer;">🌾 Which crops are supported?</summary>
+        <p style="margin-top: 10px;">Currently, the system supports 10 major crops like wheat, rice, maize, pulses, and
+            more.</p>
+    </details>
+    <section
+        style="padding: 50px 30px; color: #ffffff; background: linear-gradient(to right, #4e54c8, #8f94fb); border-radius: 25px; margin: 40px auto; max-width: 1100px;">
+        <h2 style="text-align: center; font-size: 30px; margin-bottom: 30px;"> Crop Trends & Best Practices</h2>
+        <div
+            style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; font-size: 17px; line-height: 1.6;">
+            <div style="flex: 1 1 300px; background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 15px;">
+                <h4>🔄 Crop Rotation</h4>
+                <p>Improves soil fertility and disrupts pest cycles by changing crops each season.</p>
+            </div>
+            <div style="flex: 1 1 300px; background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 15px;">
+                <h4>🌱 Organic Fertilizers</h4>
+                <p>Boosts soil health naturally and reduces long-term environmental damage.</p>
+            </div>
+            <div style="flex: 1 1 300px; background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 15px;">
+                <h4>💧 Precision Irrigation</h4>
+                <p>Minimizes water usage while maximizing crop health through targeted watering.</p>
+            </div>
+            <div style="flex: 1 1 300px; background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 15px;">
+                <h4>☀️ Weather Monitoring</h4>
+                <p>Helps decide optimal sowing and harvesting times by tracking local weather trends.</p>
+            </div>
+            <div style="flex: 1 1 300px; background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 15px;">
+                <h4>📊 Data-Driven Farming</h4>
+                <p>Leverage AI tools like this to make smart choices about crop types and timing.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <h1 class="text-center" style="color: rgb(0, 0, 0);">Types Of Soils</h1>
+    <div class="swiper">
+
+        <div class="swiper-wrapper">
+            <!-- Slides (wrap each slide-card in swiper-slide )-->
+            <div class="swiper-slide">
+                <div class="slide-card ">
+                    <img class="slide-card-img-top" src="{{ url_for('static', filename='images/1.jpeg') }}"
+                        alt="Alluvial Soil">
+                    <div class="slide-card-body">
+                        <h5>
+                            Alluvial Soil <br />
+
+                        </h5>
+                        <p class="slide-card-text">
+                            " Alluvial soil is found in river plains like the Ganges and Nile. It is highly fertile,
+                            easy
+                            to cultivate, and retains
+                            moisture well. However, it may lack nitrogen and phosphorus and is prone to erosion near
+                            rivers. It's ideal for growing rice, wheat, sugarcane, maize, and cotton. "
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Slides (wrap each slide-card in swiper-slide )-->
+            <div class="swiper-slide">
+                <div class="slide-card ">
+                    <img class="slide-card-img-top" src="{{ url_for('static', filename='images/2.jpeg') }}"
+                        alt="Black soil">
+                    <div class="slide-card-body">
+                        <h5>
+                            Black Soil <br />
+
+                        </h5>
+                        <p class="slide-card-text">
+                            “ Black soil is found in the Deccan Plateau and parts of South America. It’s rich in clay
+                            and
+                            minerals like calcium and
+                            potassium, and retains moisture well. However, it drains poorly and becomes sticky when wet.
+                            It’s best suited for
+                            cotton, soybeans, and groundnut. ”
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="slide-card ">
+                    <img class="slide-card-img-top" src="{{ url_for('static', filename='images/3.jpeg') }}"
+                        alt="Red Soil">
+                    <div class="slide-card-body">
+                        <h5>
+                            Red Soil <br />
+
+                        </h5>
+                        <p class="slide-card-text">
+                            “ Red soil occurs in tropical regions such as India and Brazil. It’s well-drained and easy
+                            to plow but is low in essential
+                            nutrients and tends to be acidic. Crops like groundnut, millets, pulses, and potatoes thrive
+                            with proper fertilization. ”
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Slides (wrap each slide-card in swiper-slide )-->
+            <div class="swiper-slide">
+                <div class="slide-card ">
+                    <img class="slide-card-img-top" src="{{ url_for('static', filename='images/4.jpeg') }}"
+                        alt="Laterite">
+                    <div class="slide-card-body">
+                        <h5>
+                            Laterite Soil<br />
+
+                        </h5>
+                        <p class="slide-card-text">
+                            “ Laterite soil is found in high-rainfall tropical regions. It’s rich in iron and aluminum
+                            but loses nutrients due to
+                            heavy leaching. It’s not naturally fertile but supports plantation crops like tea, coffee,
+                            coconut, and rubber with
+                            added fertilizers. ”
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide-card ">
+                    <img class="slide-card-img-top" src="{{ url_for('static', filename='images/5.jpeg') }}"
+                        alt="Desert">
+                    <div class="slide-card-body">
+                        <h5>
+                            Desert Soil<br />
+
+                        </h5>
+                        <p class="slide-card-text">
+                            “ Found in arid regions like the Sahara and Thar Desert, desert soil has good drainage and
+                            can be productive with
+                            irrigation. It is low in nutrients and organic matter, with salinity issues. With
+                            irrigation, crops like dates, millets,
+                            barley, and jowar can be cultivated. ”
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // Default parameters
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            //parameter for center active slide 
+            centeredSlides: true,
+            // Responsive breakpoints
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                // when window width is >= 480px
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                },
+                // when window width is >= 640px
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 40
+                }
+            }
+        })
+
+
+    </script>
+    <footer style="background-color: #111; color: white; padding: 25px 15px; text-align: center; margin-top: 60px;">
+        <p style="font-size: 16px;">📧 Contact us at:
+            <a href="mailto:support@cropyield.ai" style="color: #0ed9dd;">shashanksankepally@gmail.com</a>
+        </p>
+        <p style="margin-top: 10px; font-size: 15px;">&copy; {{ now.year }} Crop Yield Prediction System. All rights
+            reserved.</p>
+    </footer>
+</body>
+
+</html>

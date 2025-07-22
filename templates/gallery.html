@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crop Home</title>
+    <!-- <link rel="stylesheet" href="home.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+
+</head>
+
+<body>
+    <h1 class="text-center" style="color: rgb(255, 255, 255);">Crop Yield Prediction System</h1>
+    <hr>
+    <div class="header">
+        <nav>
+            <div class="nav-links">
+                <!-- <a href="about.html">About</a>
+                <a href="Home.html">Crops</a>
+                <a href="index.html">Prediction</a> -->
+                <!-- <a href="{{ url_for('about') }}">About</a>
+                <a href="{{ url_for('home') }}">Crops</a>
+                <a href="{{ url_for('index') }}">Prediction</a> -->
+                <a href="{{ url_for('home') }}"><i class="fas fa-home"></i> Home</a>
+                <a href="{{ url_for('gallery') }}"><i class="fas fa-leaf"></i> Crops</a>
+                <a href="{{ url_for('index') }}"><i class="fas fa-info-circle"></i> Prediction</a>
+                <a href="{{ url_for('about') }}"><i class="fas fa-seedling"></i> About</a>
+
+            </div>
+        </nav>
+    </div>
+    <hr>
+    <h2 class="text-center" style="color: rgb(0, 0, 0);">Crop Gallery</h2>
+    <div class="crop-gallery">
+        <div class="crop-card" onclick="toggleDetails(this)">
+            <!-- <img src="images/wheat.jpg" alt="Wheat"> -->
+            <img src="{{ url_for('static', filename='images/wheat.jpg') }}" alt="Wheat">
+            <div class="crop-details">
+                <h3 style="margin: 0 0 10px;">Wheat</h3>
+                Wheat: Grows well in temperate climates with moderate rainfall.
+                <ul style="list-style: none; padding: 0; font-size: 14px;">
+                    <li><strong>Ideal Climate:</strong> Temperate</li>
+                    <li><strong>Temp:</strong> 15–25°C</li>
+                    <li><strong>Rainfall:</strong> 500–1000 mm/year</li>
+                    <li><strong>Soil Type:</strong> Well-drained loamy soil</li>
+                    <li><strong>Season:</strong> Rabi</li>
+                </ul>
+            </div>
+        </div>
+        <div class="crop-card" onclick="toggleDetails(this)">
+            <!-- <img src="images/Maize.jpg" alt=" Maize"> -->
+            <img src="{{ url_for('static', filename='images/Maize.jpg') }}" alt="Maize">
+            <div class="crop-details">
+                <h3 style="margin: 0 0 10px;">Maize</h3>
+                Maize: Needs sunny weather and fertile soil.
+                <ul style="list-style: none; padding: 0; font-size: 14px;">
+                    <li><strong>Ideal Climate:</strong> Warm and sunny</li>
+                    <li><strong>Temp:</strong> 18–27°C</li>
+                    <li><strong>Rainfall:</strong> 500–800 mm/year</li>
+                    <li><strong>Soil Type:</strong> Fertile, well-drained loam</li>
+                    <li><strong>Season:</strong>Kharif</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="crop-card" onclick="toggleDetails(this)">
+            <!-- <img src="images/wheat.jpeg" alt=" wheat"> -->
+            <img src="{{ url_for('static', filename='images/rice and Paddy.jpeg') }}" alt="rice and Paddy">
+            <div class="crop-details">
+                <h3 style="margin: 0 0 10px;">Paddy (Rice)</h3>
+                Paddy: Grows best in flooded fields with high rainfall and warm temperatures.
+                <ul style="list-style: none; padding: 0; font-size: 14px;">
+                    <li><strong>Ideal Climate:</strong> Hot and humid</li>
+                    <li><strong>Temp:</strong> 20–35°C</li>
+                    <li><strong>Rainfall:</strong> 1200–2000 mm/year</li>
+                    <li><strong>Soil Type:</strong>Clayey, water-retentive</li>
+                    <li><strong>Season:</strong>Kharif (Monsoon)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="crop-card" onclick="toggleDetails(this)">
+            <!-- <img src="images/Potatoes.jpeg" alt=" Potatoes"> -->
+            <img src="{{ url_for('static', filename='images/Potatoes.jpeg') }}" alt="Potatoes">
+            <div class="crop-details">
+                <h3 style="margin: 0 0 10px;">Potatoes</h3>
+                Potatoes: A drought-tolerant grain ideal for arid and semi-arid regions.
+                <ul style="list-style: none; padding: 0; font-size: 14px;">
+                    <li><strong>Ideal Climate:</strong> Cool, temperate</li>
+                    <li><strong>Temp:</strong> 15–20°C</li>
+                    <li><strong>Rainfall:</strong> 500–700 mm/year</li>
+                    <li><strong>Soil Type:</strong> Sandy loam, well-drained</li>
+                    <li><strong>Season:</strong>Rabi (Winter)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="crop-card" onclick="toggleDetails(this)">
+            <!-- <img src="images/Sorghum.jpg" alt=" Sorghum"> -->
+            <img src="{{ url_for('static', filename='images/Sorghum.jpg') }}" alt="Sorghum">
+            <div class="crop-details">
+                <h3 style="margin: 0 0 10px;">Sorghum</h3>
+                Sorghum: Thrive in cool climates with well-drained, fertile soil.
+                <ul style="list-style: none; padding: 0; font-size: 14px;">
+                    <li><strong>Ideal Climate:</strong> Semi-arid, drought-resistant</li>
+                    <li><strong>Temp:</strong> 25–30°C</li>
+                    <li><strong>Rainfall:</strong> 400–700 mm/year</li>
+                    <li><strong>Soil Type:</strong> Sandy loam or clay loam</li>
+                    <li><strong>Season:</strong>Kharif or Summer</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="crop-card" onclick="toggleDetails(this)">
+            <!-- <img src="images/Soybeans.jpeg" alt=" Soybeans"> -->
+            <img src="{{ url_for('static', filename='images/Soybeans.jpeg') }}" alt="Soybeans">
+            <div class="crop-details">
+                <h3 style="margin: 0 0 10px;">Soybeans</h3>
+                Soybeans: Prefer warm climates and well-drained soil, rich in organic matter.
+                <ul style="list-style: none; padding: 0; font-size: 14px;">
+                    <li><strong>Ideal Climate:</strong> Warm and moderate</li>
+                    <li><strong>Temp:</strong> 20–30°C</li>
+                    <li><strong>Rainfall:</strong> 500–1000 mm/year</li>
+                    <li><strong>Soil Type:</strong> Loamy, rich in organic matter</li>
+                    <li><strong>Season:</strong>Kharif</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="crop-card" onclick="toggleDetails(this)">
+            <!-- <img src="images/Sweet Potatoes.jpeg" alt="Sweet Potatoes"> -->
+            <img src="{{ url_for('static', filename='images/Sweet Potato.jpeg') }}" alt="Sweet Potatoes">
+            <div class="crop-details">
+                <h3 style="margin: 0 0 10px;">Sweet Potatoes</h3>
+                Sweet Potatoes: Grow well in warm climates with loose, sandy soil.
+                <ul style="list-style: none; padding: 0; font-size: 14px;">
+                    <li><strong>Ideal Climate:</strong> Warm subtropical</li>
+                    <li><strong>Temp:</strong> 21–26°C</li>
+                    <li><strong>Rainfall:</strong> 750–1200 mm/year</li>
+                    <li><strong>Soil Type:</strong> Sandy loam, well-drained</li>
+                    <li><strong>Season:</strong> Kharif or early summer</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="crop-card" onclick="toggleDetails(this)">
+            <!-- <img src="images/cassava.jpg" alt="cassava"> -->
+            <img src="{{ url_for('static', filename='images/cassava.jpeg') }}" alt="cassava">
+            <div class="crop-details">
+                <h3 style="margin: 0 0 10px;">Cassava</h3>
+                Cassava: Grows in poor soils and is drought-tolerant, ideal for tropical climates.
+                <ul style="list-style: none; padding: 0; font-size: 14px;">
+                    <li><strong>Ideal Climate:</strong> Tropical, warm</li>
+                    <li><strong>Temp:</strong> 25–35°C</li>
+                    <li><strong>Rainfall:</strong> 1000–1500 mm/year</li>
+                    <li><strong>Soil Type:</strong> Sandy loam, tolerates poor soil</li>
+                    <li><strong>Season:</strong> Year-round </li>
+                </ul>
+            </div>
+        </div>
+        <div class="crop-card" onclick="toggleDetails(this)">
+            <!-- <img src="images/yams.jpeg" alt="yams"> -->
+            <img src="{{ url_for('static', filename='images/yams.jpeg') }}" alt="yams">
+            <div class="crop-details">
+                <h3 style="margin: 0 0 10px;">Yams</h3>
+                Yams: Thrive in tropical regions with well-drained soil and consistent rainfall.
+                <ul style="list-style: none; padding: 0; font-size: 14px;">
+                    <li><strong>Ideal Climate:</strong> Tropical, humid</li>
+                    <li><strong>Temp:</strong> 25–30°C</li>
+                    <li><strong>Rainfall:</strong> 1000–1500 mm/year</li>
+                    <li><strong>Soil Type:</strong> Fertile, well-drained loam soil</li>
+                    <li><strong>Season:</strong> Kharif</li>
+                </ul>
+            </div>
+        </div>
+        <div class="crop-card" onclick="toggleDetails(this)">
+            <!-- <img src="images/Plantains.jpeg" alt=" Plantains"> -->
+            <img src="{{ url_for('static', filename='images/Plantains.jpeg') }}" alt="Plantains">
+            <div class="crop-details">
+                <h3 style="margin: 0 0 10px;">Plantains</h3>
+                Plantains: Require humid tropical climates and fertile, moist soil.
+                <ul style="list-style: none; padding: 0; font-size: 14px;">
+                    <li><strong>Ideal Climate:</strong> Humid tropical</li>
+                    <li><strong>Temp:</strong> 26–30°C</li>
+                    <li><strong>Rainfall:</strong> 1200–2000 mm/year</li>
+                    <li><strong>Soil Type:</strong> Moist, fertile loamy soil</li>
+                    <li><strong>Season:</strong>Year-round</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleDetails(card) {
+            card.querySelector(".crop-details").classList.toggle("show");
+        }
+    </script>
+    <footer style="background-color: #111; color: white; padding: 25px 15px; text-align: center; margin-top: 60px;">
+        <p style="font-size: 16px;">📧 Contact us at:
+            <a href="mailto:support@cropyield.ai" style="color: #0ed9dd;">shashanksankepally@gmail.com</a>
+        </p>
+        <p style="margin-top: 10px; font-size: 15px;">&copy; {{ now.year }} Crop Yield Prediction System. All rights
+            reserved.</p>
+    </footer>
+</body>
+
+</html>
