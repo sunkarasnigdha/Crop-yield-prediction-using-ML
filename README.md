@@ -73,8 +73,8 @@ The **Crop Yield Prediction System** is a machine learning-powered application t
 ## Setup and Installation
 
 ```shell
-git clone https://github.com/shashank9391/crop-yield-prediction-system.git
-cd crop-yield-prediction-system
+git clone https://github.com/sunkarasnigdha/Crop-yield-prediction-using-ML.git
+cd Crop-yield-prediction-using-ML
 ```
 Run the following command to start the application:
 ```shell
